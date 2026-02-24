@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Sarah Chapman — Brighton House Pioneer • 90s Dance Legend</title>
+<meta name="description" content="DJ Sarah Chapman — Brighton house music pioneer from the 1990s. Celebrating a legendary career and her impact on UK dance music history.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0d0d15;--bg2:#1a1a2e;--bg3:#252545;
+--text:#e0e0e0;--text-dim:#9090a0;--text-bright:#ffffff;
+--accent:#ff0080;--accent2:#00ff80;--accent3:#ffff00;
+--accent4:#8000ff;--accent5:#ff4000;
+--grad:linear-gradient(135deg,var(--accent),var(--accent2));
+--grad2:linear-gradient(135deg,var(--accent3),var(--accent4));
+--radius:12px;--radius-sm:8px;
+--font:'Space Grotesk',system-ui,sans-serif;
+--mono:'JetBrains Mono',monospace;
+--nav-h:64px;
+}
+[data-theme="light"]{
+--bg:#f8f8fa;--bg2:#efefef;--bg3:#e0e0e5;
+--text:#2a2a3a;--text-dim:#6a6a7a;--text-bright:#0a0a0f;
+--accent:#e60073;--accent2:#00cc66;--accent3:#e6e600;
+}
+
+/* 90s Neon Effects */
+.neon-text{
+  text-shadow:0 0 5px var(--accent),0 0 10px var(--accent),0 0 20px var(--accent);
+  animation:neon-flicker 2s infinite alternate;
+}
+@keyframes neon-flicker{
+  0%,100%{text-shadow:0 0 5px var(--accent),0 0 10px var(--accent),0 0 20px var(--accent);}
+  50%{text-shadow:0 0 2px var(--accent),0 0 5px var(--accent),0 0 10px var(--accent);}
+}
+
+/* Theme toggle */
+.theme-toggle{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .3s;color:var(--text-dim);font-size:1.1rem;margin-left:12px}
+.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
+
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;overflow-x:hidden}
+
+/* Navigation */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 24px;height:var(--nav-h);
+  background:rgba(13,13,21,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,0,128,.2);
+  display:flex;align-items:center;justify-content:space-between;transition:all .3s}
+.nav-left{display:flex;align-items:center;gap:24px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--text-bright);text-decoration:none}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:var(--text-dim);text-decoration:none;font-weight:500;transition:all .2s;font-size:.9rem}
+.nav-links a:hover{color:var(--accent)}
+
+/* Hero Section */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:120px 24px 60px}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;opacity:.3;
+  background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(255,0,128,.1),transparent 70%),
+  radial-gradient(ellipse 60% 50% at 20% 80%,rgba(0,255,128,.08),transparent 60%),
+  radial-gradient(ellipse 40% 70% at 80% 20%,rgba(255,255,0,.06),transparent 50%)}
+.hero-content{text-align:center;max-width:800px;z-index:1}
+.hero-title{font-size:clamp(2.5rem,8vw,5rem);font-weight:700;margin-bottom:24px;
+  background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-subtitle{font-size:clamp(1.2rem,4vw,1.8rem);color:var(--text-bright);margin-bottom:16px;font-weight:400}
+.hero-tagline{font-size:clamp(1rem,3vw,1.2rem);color:var(--text-dim);margin-bottom:40px}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;
+  background:var(--grad);border:none;border-radius:50px;color:#fff;font-weight:600;
+  text-decoration:none;transition:all .3s;font-size:1rem}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,0,128,.3)}
+
+/* Sections */
+.section{padding:80px 24px}
+.container{max-width:1200px;margin:0 auto}
+.section-label{display:flex;align-items:center;gap:8px;color:var(--accent);font-weight:600;
+  font-size:.85rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-size:clamp(2rem,6vw,3rem);font-weight:700;margin-bottom:24px;color:var(--text-bright)}
+.section-subtitle{font-size:1.2rem;color:var(--text-dim);margin-bottom:48px;max-width:600px}
+
+/* Timeline */
+.timeline{position:relative;padding:40px 0}
+.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;
+  background:linear-gradient(to bottom,var(--accent),var(--accent2),var(--accent3));transform:translateX(-50%)}
+.timeline-item{display:flex;margin:40px 0;position:relative}
+.timeline-item:nth-child(even){flex-direction:row-reverse}
+.timeline-content{background:var(--bg2);border-radius:var(--radius);padding:24px;
+  width:45%;border-left:3px solid var(--accent);position:relative}
+.timeline-item:nth-child(even) .timeline-content{border-left:none;border-right:3px solid var(--accent2)}
+.timeline-year{font-size:1.5rem;font-weight:700;color:var(--accent);margin-bottom:8px}
+.timeline-event{font-size:1.1rem;font-weight:600;color:var(--text-bright);margin-bottom:8px}
+.timeline-desc{color:var(--text-dim)}
+
+/* Gallery Grid */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin:48px 0}
+.gallery-item{background:var(--bg2);border-radius:var(--radius);overflow:hidden;transition:all .3s;cursor:pointer}
+.gallery-item:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(255,0,128,.2)}
+.gallery-img{width:100%;height:250px;object-fit:cover}
+.gallery-content{padding:20px}
+.gallery-title{font-weight:600;color:var(--text-bright);margin-bottom:8px}
+.gallery-desc{color:var(--text-dim);font-size:.9rem}
+
+/* Footer */
+footer{padding:60px 24px;text-align:center;border-top:1px solid rgba(255,0,128,.1);color:var(--text-dim)}
+footer .sarah-quote{font-family:var(--mono);margin-bottom:16px;color:var(--accent);font-style:italic}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links{display:none}
+  .timeline::before{left:20px}
+  .timeline-item,.timeline-item:nth-child(even){flex-direction:column}
+  .timeline-content{width:calc(100% - 60px);margin-left:60px}
+  .timeline-item:nth-child(even) .timeline-content{margin-left:60px;border-left:3px solid var(--accent2);border-right:none}
+}
+</style>
+</head>
+<body data-theme="dark">
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="#" class="logo">DJ Sarah Chapman</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#flyers">Flyers</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#legacy">Legacy</a></li>
+    </ul>
+  </div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <i class="fas fa-sun" id="themeIcon"></i>
+  </button>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Sarah Chapman</h1>
+    <h2 class="hero-subtitle">Brighton House Pioneer</h2>
+    <p class="hero-tagline">Celebrating a legendary career in 90s dance music • Now soaring as a commercial pilot</p>
+    <a href="#timeline" class="hero-cta">
+      <i class="fas fa-music"></i>
+      Explore Her Legacy
+    </a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-user"></i> About</div>
+    <h2 class="section-title">From Decks to Flight Decks</h2>
+    <p class="section-subtitle">Sarah Chapman was one of the pioneering female DJs in the UK house music scene during the 1990s, making her mark in Brighton's legendary club culture before transitioning to become a commercial airline pilot.</p>
+    
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px">
+      <div>
+        <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">The Brighton Years</h3>
+        <p style="color:var(--text-dim);line-height:1.7">
+          During the golden age of house music, Sarah was breaking barriers and moving dance floors across Brighton's most iconic venues. Her sets were legendary, her presence commanding, and her contribution to the scene immeasurable.
+        </p>
+      </div>
+      <div>
+        <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">Taking Flight</h3>
+        <p style="color:var(--text-dim);line-height:1.7">
+          After dominating the decks, Sarah set her sights on the skies, becoming a commercial airline pilot. From commanding dance floors to commanding aircraft, her journey exemplifies determination and excellence.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="section" id="timeline">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-clock"></i> Timeline</div>
+    <h2 class="section-title">The Journey</h2>
+    <p class="section-subtitle">Key moments in Sarah's incredible career, from her first gig to taking to the skies.</p>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">Early 1990s</div>
+          <div class="timeline-event">The Beginning</div>
+          <p class="timeline-desc">Sarah enters the Brighton house music scene, quickly establishing herself as a force to be reckoned with.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">Mid 1990s</div>
+          <div class="timeline-event">Peak Years</div>
+          <p class="timeline-desc">Legendary residencies and standout performances across Brighton's most iconic venues during the height of UK house music.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">Late 1990s</div>
+          <div class="timeline-event">Legacy Established</div>
+          <p class="timeline-desc">Having cemented her place in dance music history, Sarah begins her transition toward new horizons.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">2000s+</div>
+          <div class="timeline-event">Taking Flight</div>
+          <p class="timeline-desc">Sarah trains and becomes a commercial airline pilot, taking her commanding presence from the DJ booth to the cockpit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Flyers Section -->
+<section class="section" id="flyers">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-images"></i> Archive</div>
+    <h2 class="section-title">Original Flyers</h2>
+    <p class="section-subtitle">Authentic promotional materials from the golden age of Brighton house music.</p>
+    
+    <div class="gallery" id="flyerGallery">
+      <!-- Flyers will be added here -->
+      <div class="gallery-item" style="background:var(--bg3);display:flex;align-items:center;justify-content:center;min-height:300px">
+        <div style="text-align:center;color:var(--text-dim)">
+          <i class="fas fa-plus-circle" style="font-size:3rem;margin-bottom:16px;color:var(--accent)"></i>
+          <p>Flyer archive coming soon</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Photos Section -->
+<section class="section" id="photos">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-camera"></i> Photos</div>
+    <h2 class="section-title">Behind the Decks</h2>
+    <p class="section-subtitle">Rare photos from Sarah's legendary performances and the Brighton scene.</p>
+    
+    <div class="gallery" id="photoGallery">
+      <!-- Photos will be added here -->
+      <div class="gallery-item" style="background:var(--bg3);display:flex;align-items:center;justify-content:center;min-height:300px">
+        <div style="text-align:center;color:var(--text-dim)">
+          <i class="fas fa-plus-circle" style="font-size:3rem;margin-bottom:16px;color:var(--accent2)"></i>
+          <p>Photo archive coming soon</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Legacy Section -->
+<section class="section" id="legacy">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-star"></i> Legacy</div>
+    <h2 class="section-title">Impact & Influence</h2>
+    <p class="section-subtitle">Sarah's contribution to UK dance music and her inspiring journey beyond the decks.</p>
+    
+    <div style="text-align:center;margin-top:60px">
+      <div style="background:var(--bg2);border-radius:var(--radius);padding:40px;max-width:600px;margin:0 auto;border-left:4px solid var(--accent3)">
+        <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.4rem">Pioneer & Inspiration</h3>
+        <p style="color:var(--text-dim);line-height:1.7;font-size:1.1rem">
+          "Sarah Chapman wasn't just a DJ—she was a trailblazer who proved that talent, determination, and passion could take you from the underground clubs of Brighton to the skies above. Her legacy lives on in every female DJ who steps behind the decks."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p class="sarah-quote">"From the dance floor to 30,000 feet—always reaching new heights"</p>
+  <p>© 2025 DJ Sarah Chapman Legacy Project. Created with love by family.</p>
+  <p style="margin-top:12px;font-size:0.85rem">Part of the <a href="https://cam61230.github.io/wavegrippa-site/" style="color:var(--accent3)">wavegrippa Heroes of House</a> series</p>
+</footer>
+
+<script>
+// Theme toggle
+let currentTheme = 'dark';
+const themeIcon = document.getElementById('themeIcon');
+
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+  localStorage.setItem('sarah-theme', theme);
+}
+
+function toggleTheme() {
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  setTheme(currentTheme);
+}
+
+// Load saved theme
+const savedTheme = localStorage.getItem('sarah-theme');
+if (savedTheme) {
+  currentTheme = savedTheme;
+  setTheme(currentTheme);
+}
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Gallery functionality (for future expansion)
+function addFlyer(imageSrc, title, description, year) {
+  const gallery = document.getElementById('flyerGallery');
+  const item = document.createElement('div');
+  item.className = 'gallery-item';
+  item.innerHTML = `
+    <img src="${imageSrc}" alt="${title}" class="gallery-img">
+    <div class="gallery-content">
+      <div class="gallery-title">${title}</div>
+      <div class="gallery-desc">${description} • ${year}</div>
+    </div>
+  `;
+  gallery.appendChild(item);
+}
+
+function addPhoto(imageSrc, title, description) {
+  const gallery = document.getElementById('photoGallery');
+  const item = document.createElement('div');
+  item.className = 'gallery-item';
+  item.innerHTML = `
+    <img src="${imageSrc}" alt="${title}" class="gallery-img">
+    <div class="gallery-content">
+      <div class="gallery-title">${title}</div>
+      <div class="gallery-desc">${description}</div>
+    </div>
+  `;
+  gallery.appendChild(item);
+}
+</script>
+
+</body>
+</html><!-- Rebuild trigger Tue Feb 24 23:17:24 GMT 2026 -->
