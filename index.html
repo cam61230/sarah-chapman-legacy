@@ -162,7 +162,7 @@ Explore Her Pedigree
       <div>
         <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">Dance Floor Pioneer</h3>
         <p style="color:var(--text-dim);line-height:1.7">
-          From Brighton's underground scene to international stages, Sarah broke barriers and established herself as a force in house music. Her sets span from intimate club nights to major festivals, building a reputation that crosses continents.
+          From Brighton's underground scene to international stages, Sarah broke barriers and established herself as a force in house music. Featured on the cover of Face Magazine and commanding lineups worldwide, her pedigree spans decades of dance culture evolution.
         </p>
       </div>
       <div>
@@ -317,7 +317,21 @@ Explore Her Pedigree
         <div style="text-align:center;color:var(--text-dim)">
           <i class="fas fa-plus-circle" style="font-size:3rem;margin-bottom:16px;color:var(--accent)"></i>
           <p>Flyer archive coming soon</p>
+          <p style="font-size:0.85rem;margin-top:8px">Original promotional materials • Venue history • Lineup collaborations</p>
         </div>
+      </div>
+    </div>
+    
+    <div style="margin-top:48px;text-align:center">
+      <div style="background:var(--bg2);border-radius:var(--radius);padding:32px;border-left:4px solid var(--accent2)">
+        <h3 style="color:var(--text-bright);margin-bottom:16px;font-size:1.3rem">
+          <i class="fas fa-handshake" style="color:var(--accent2);margin-right:8px"></i>
+          Shared Stages & Lineups
+        </h3>
+        <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
+          The flyer archive will reveal the full scope of Sarah's collaborations—sharing stages with legendary DJs and emerging artists throughout her career. From underground raves to commercial club nights, her connections span the entire spectrum of dance music.
+        </p>
+        <p style="color:var(--accent3);font-weight:600;font-size:0.9rem">Collaboration network to be populated from flyer archive</p>
       </div>
     </div>
   </div>
@@ -349,12 +363,41 @@ Explore Her Pedigree
     <h2 class="section-title">Still Commanding Dance Floors</h2>
     <p class="section-subtitle">Sarah's influence continues to shape the scene while she maintains an active presence behind the decks.</p>
     
-    <div style="text-align:center;margin-top:60px">
-      <div style="background:var(--bg2);border-radius:var(--radius);padding:40px;max-width:600px;margin:0 auto;border-left:4px solid var(--accent3)">
-        <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.4rem">Pedigree & Influence</h3>
-        <p style="color:var(--text-dim);line-height:1.7;font-size:1.1rem">
-          "From breaking barriers in 90s Brighton to commanding aircraft and international dance floors today, Sarah Chapman proves that true pioneers never stop evolving. Her pedigree speaks for itself—and she's still writing new chapters."
-        </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px">
+      <div>
+        <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.3rem">
+          <i class="fas fa-magazine" style="color:var(--accent);margin-right:12px"></i>
+          Media Recognition
+        </h3>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:24px;border-left:3px solid var(--accent)">
+          <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
+            Featured on the cover of <strong style="color:var(--text-bright)">Face Magazine</strong>, cementing her status as a scene icon during the height of UK dance culture.
+          </p>
+          <p style="color:var(--accent);font-weight:600;font-size:0.9rem">Face Magazine Cover Feature</p>
+        </div>
+      </div>
+      
+      <div>
+        <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.3rem">
+          <i class="fas fa-users" style="color:var(--accent2);margin-right:12px"></i>
+          Legendary Lineups
+        </h3>
+        <div style="background:var(--bg2);border-radius:var(--radius);padding:24px;border-left:3px solid var(--accent2)">
+          <p style="color:var(--text-dim);line-height:1.7;margin-bottom:16px">
+            Shared lineups with countless pioneering DJs throughout her career. Her flyer archive tells the story of connections and collaborations across the scene.
+          </p>
+          <p style="color:var(--accent3);font-weight:600;font-size:0.9rem">Collaborations Archive Coming Soon</p>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align:center;margin-top:48px">
+      <div style="background:var(--bg2);border-radius:var(--radius);padding:40px;max-width:700px;margin:0 auto;border-left:4px solid var(--accent3)">
+        <h3 style="color:var(--text-bright);margin-bottom:20px;font-size:1.4rem">Recent Recognition</h3>
+        <blockquote style="color:var(--text-dim);line-height:1.7;font-size:1.1rem;font-style:italic;margin-bottom:16px">
+          "[Recent pedigree quote from social media to be added - showcasing current respect and ongoing influence in the scene]"
+        </blockquote>
+        <p style="color:var(--accent2);font-weight:600;font-size:0.9rem">— Recent promotional quote, 2024/2025</p>
       </div>
     </div>
   </div>
@@ -491,6 +534,65 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     button.disabled = false;
   }, 2000);
 });
+
+// Gallery functions for content population
+function addFlyer(imageSrc, title, description, year) {
+  const gallery = document.getElementById('flyerGallery');
+  const item = document.createElement('div');
+  item.className = 'gallery-item';
+  item.innerHTML = `
+    <img src="${imageSrc}" alt="${title}" class="gallery-img">
+    <div class="gallery-content">
+      <div class="gallery-title">${title}</div>
+      <div class="gallery-desc">${description} • ${year}</div>
+    </div>
+  `;
+  gallery.appendChild(item);
+}
+
+function addPhoto(imageSrc, title, description) {
+  const gallery = document.getElementById('photoGallery');
+  const item = document.createElement('div');
+  item.className = 'gallery-item';
+  item.innerHTML = `
+    <img src="${imageSrc}" alt="${title}" class="gallery-img">
+    <div class="gallery-content">
+      <div class="gallery-title">${title}</div>
+      <div class="gallery-desc">${description}</div>
+    </div>
+  `;
+  gallery.appendChild(item);
+}
+
+// Function to add collaborating DJs (derived from flyers)
+function addCollaboration(djName, venue, date, eventName) {
+  console.log(`Collaboration: ${djName} with Sarah Chapman at ${venue} - ${eventName} (${date})`);
+  // Future: populate collaboration network display
+}
+
+// Function to add discography items
+function addDiscographyItem(title, type, year, platforms, artwork) {
+  const gallery = document.getElementById('discographyGallery');
+  const item = document.createElement('div');
+  item.className = 'gallery-item';
+  
+  let platformLinks = '';
+  if (platforms && platforms.length > 0) {
+    platformLinks = platforms.map(platform => 
+      `<a href="${platform.url}" target="_blank" rel="noopener" style="color:var(--accent);margin-right:8px;text-decoration:none;font-size:0.9rem">${platform.name}</a>`
+    ).join('');
+  }
+  
+  item.innerHTML = `
+    ${artwork ? `<img src="${artwork}" alt="${title}" class="gallery-img">` : ''}
+    <div class="gallery-content">
+      <div class="gallery-title">${title}</div>
+      <div class="gallery-desc">${type} • ${year}</div>
+      ${platformLinks ? `<div style="margin-top:12px">${platformLinks}</div>` : ''}
+    </div>
+  `;
+  gallery.appendChild(item);
+}
 </script>
 
 </body>
